@@ -1,0 +1,24 @@
+<h1>Casio Page</h1>
+
+  <label>Number 1</label>
+  <input type="number" class="form-control" style="width: 30%" [ngModel]="number1"><br>
+  <label>Number 2</label>
+  <input type="number" class="form-control" style="width: 30%" [ngModel]="number2">
+  <hr>
+  <div class="row">
+    <div class="col-md-3">
+      <button class="btn btn-primary btn-lg" style="width: 300px" (click)="calculator('+')">+</button>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-primary btn-lg" style="width: 300px" (click)="calculator('-')">-</button>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-primary btn-lg" style="width: 300px" (click)="calculator('*')">*</button>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-primary btn-lg" style="width: 300px" (click)="calculator('/')">/</button>
+    </div>
+  </div>
+
+
+<h3>Your result : {{result}}</h3>
