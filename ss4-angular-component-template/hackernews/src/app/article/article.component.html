@@ -1,19 +1,21 @@
+<app-navbar></app-navbar>
 <h2>Today's article</h2>
 <hr>
 <div>
   <a href="{{article.url}}" target="_blank">{{article.title}}</a>
 </div>
-<hr>
-@CodeGym, 2021
+
 <hr>
 <tr>
   <td></td>
-  <td><button style="float: right" (click)="addNewArticle()">Add</button></td>
+  <td><button style="float: right" class="btn btn-success pl-2" (click)="addNewArticle()">Add</button></td>
 </tr>
 
 <div>
   <h2>Article Information</h2>
   <div *ngFor="let art of articles">
-    <a href="{{art.url}}" target="_blank">{{art.title}}</a><app-like></app-like>
-  </div>
+    <a href="{{art.url}}" target="_blank">{{art.title}} </a>
+    <app-like></app-like>
+  </div><br>
 </div>
+<app-footer></app-footer>
