@@ -1,1 +1,60 @@
-<p>register works!</p>
+<div class="col-md-6 align-items-center">
+  <form [formGroup]="register" (ngSubmit)="createAccount()">
+    <label>Email</label>
+    <input formControlName="email" type="email" name="email" class="form-control" required>
+    <p style="color: red" *ngIf="register.controls.email.hasError('required') &&register.controls.email.touched">Email
+      không được để trống !</p>
+    <p style="color: red" *ngIf="register.controls.email.hasError('email')">Không đúng định dạng email</p>
+
+    <label>Password</label>
+    <input formControlName="password" type="password" name="password" class="form-control" required>
+    <p style="color: red" *ngIf="register.controls.password.hasError('required') &&register.controls.password.touched">
+      Password không được để trống !</p>
+    <p style="color: red" *ngIf="register.controls.password.hasError('minlength')&&register.controls.password.touched">
+      Password phải lớn hơn 6 kí tự</p>
+
+    <label>Confirm password</label>
+    <input formControlName="confirmPassword" type="password" name="confirmPassword" class="form-control" required>
+    <p style="color: red"
+       *ngIf="register.controls.confirmPassword.hasError('required') &&register.controls.confirmPassword.touched">
+      Confirm Password không được để trống !</p>
+
+    <label>Country</label>
+    <select formControlName="country" class="form-control">
+      <option selected>Việt Nam</option>
+      <option>Hoa kỳ</option>
+      <option>Khác</option>
+    </select>
+    <p style="color: red"
+       *ngIf="register.controls.country.hasError('required') &&register.controls.country.touched">Country
+      không được để trống !</p>
+
+    <label>Age</label>
+    <input formControlName="age" type="number" name="age" class="form-control" required>
+    <p style="color: red" *ngIf="register.controls.age.hasError('required') &&register.controls.age.touched">Age không
+      được để trống !</p>
+    <p style="color: red" *ngIf="register.controls.age.hasError('min')">Tuổi phải lớn hơn 18</p>
+
+    <p>Gender</p>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input formControlName="gender" type="radio" id="customRadioInline1" name="gender" class="custom-control-input" value="1">
+      <label class="custom-control-label" for="customRadioInline1">Male</label>
+    </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input formControlName="gender" type="radio" id="customRadioInline2" name="gender" class="custom-control-input" value="2">
+      <label class="custom-control-label" for="customRadioInline2">Female</label>
+    </div>
+    <p style="color: red" *ngIf="register.controls.gender.hasError('required') &&register.controls.gender.touched">
+      Gender không được để trống !</p>
+    <br>
+
+    <label>Phone</label>
+    <input formControlName="phone" type="text" name="phone" class="form-control" required>
+    <p style="color: red" *ngIf="register.controls.phone.hasError('required') &&register.controls.phone.touched">Phone
+      không được để trống !</p>
+    <p style="color: red" *ngIf="register.controls.phone.hasError('pattern')">Phone không đúng định dạng 8412345678</p>
+    <br>
+    <button type="submit" class="btn btn-success">Create</button>
+
+  </form>
+</div>
