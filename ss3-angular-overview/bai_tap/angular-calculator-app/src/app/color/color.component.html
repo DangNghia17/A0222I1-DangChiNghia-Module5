@@ -1,12 +1,13 @@
 <h1 style="text-align: center">Color component works!</h1>
-
+<h1>Change Color without Input : Color</h1>
 <button type="button" class="btn btn-primary" (click)="changeColor('primary')">Primary</button> &emsp;
-<button type="button" class="btn btn-warning" (click)="changeColor('warning')">Warning</button> <br>
+<button type="button" class="btn btn-warning" (click)="changeColor('warning')">Warning</button>
 <button type="button" class="btn btn-success" (click)="changeColor('success')">Success</button>
 <button type="button" class="btn btn-danger" (click)="changeColor('danger')">Danger</button>
 <br> <br>
-<h1>123123</h1>
-
+<h1>Change Color with Input : Color</h1>
+<input type="color" [(ngModel)]="colorNew" >
 <!--<p [style.background-color]="colorNew" style="width: 50%; color: white">View</p>-->
 <p [ngStyle]="{'background-color': colorNew}" style="width: 50%; height: 50px; color: white"> &nbsp;</p>
+
 

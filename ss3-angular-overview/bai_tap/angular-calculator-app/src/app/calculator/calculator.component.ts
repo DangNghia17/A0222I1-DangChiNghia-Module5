@@ -15,7 +15,7 @@ export class CalculatorComponent implements OnInit {
 
   public number1: number = 0;
   public number2: number = 0;
-  public result: number;
+  public result: number | string;
 
   calculator(operator: string) {
     switch (operator) {
@@ -29,8 +29,11 @@ export class CalculatorComponent implements OnInit {
         this.result = this.number1 * this.number2;
         break;
       case "/":
-          this.result = this.number1 / this.number2;
-        break;
+        if (this.number1 || this.number2 === 0) {
+          return this.result = 'Not divided with 0!'
+        }
+        return this.result = this.number1 / this.number2;
+
     }
 
     console.log(this.number1);

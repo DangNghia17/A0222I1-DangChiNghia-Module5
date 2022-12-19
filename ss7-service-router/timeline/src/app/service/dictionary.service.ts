@@ -6,11 +6,11 @@ import {Dictionary} from "../model/dictionary";
 })
 export class DictionaryService {
   words: Dictionary[] = [
-    {id : 1 ,word: 'one', meaning: 'một'},
-    {id : 2 ,word: 'two', meaning: 'hai'},
-    {id : 3 ,word: 'three', meaning: 'ba'},
-    {id : 4 ,word: 'four', meaning: 'bốn'},
-    {id : 5 ,word: 'five', meaning: 'năm'},
+    {id: 1, word: 'one', meaning: 'một'},
+    {id: 2, word: 'two', meaning: 'hai'},
+    {id: 3, word: 'three', meaning: 'ba'},
+    {id: 4, word: 'four', meaning: 'bốn'},
+    {id: 5, word: 'five', meaning: 'năm'},
   ]
 
   constructor() {
@@ -20,7 +20,7 @@ export class DictionaryService {
     return this.words;
   }
 
-  // findById(i: number) {
-  //   return this.words[i];
-  // }
+  findById(id: number) {
+    return this.words.find(words => words.id === id);
+  }
 }

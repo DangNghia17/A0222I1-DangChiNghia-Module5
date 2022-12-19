@@ -11,6 +11,8 @@ import {ProductCreateComponent} from './product/product-create/product-create.co
 import {ReactiveFormsModule} from "@angular/forms";
 import { DicPageComponent } from './dictionary/dic-page/dic-page.component';
 import { DicDetailComponent } from './dictionary/dic-detail/dic-detail.component';
+import { ProductUpdateComponent } from './product/product-update/product-update.component';
+import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { DicDetailComponent } from './dictionary/dic-detail/dic-detail.component
     ProductListComponent,
     ProductCreateComponent,
     DicPageComponent,
-    DicDetailComponent
+    DicDetailComponent,
+    ProductUpdateComponent,
+    ProductDeleteComponent
   ],
   imports: [
     BrowserModule,
