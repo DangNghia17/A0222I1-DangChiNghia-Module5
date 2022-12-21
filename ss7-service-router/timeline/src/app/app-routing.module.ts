@@ -20,11 +20,18 @@ const routes: Routes = [
   {path: 'dictionary', component: DicPageComponent},
   {path: 'detail/:id', component: DicDetailComponent},
 
-  {path: 'product/list', component: ProductListComponent},
-  {path: 'product/create', component: ProductCreateComponent},
-  {path: 'product/edit/:id', component: ProductUpdateComponent},
-  {path: 'product/delete/:id', component: ProductDeleteComponent}
-
+  // {path: 'product/list', component: ProductListComponent},
+  // {path: 'product/create', component: ProductCreateComponent},
+  // {path: 'product/edit/:id', component: ProductUpdateComponent},
+  // {path: 'product/delete/:id', component: ProductDeleteComponent},
+  {
+    path: 'product',
+    loadChildren: () => import('./product/product.module').then(module => module.ProductModule)
+  },
+  {
+    path: 'category',
+    loadChildren: () => import('./category/category.module').then(module => module.CategoryModule)
+  }
 ];
 
 @NgModule({

@@ -6,14 +6,10 @@ import {AppComponent} from './app.component';
 import {TimelinesComponent} from './timelines/timelines.component';
 import {PlaylistComponent} from './playlist/playlist.component';
 import {PlaylistPlayerComponent} from './playlist-player/playlist-player.component';
-import {ProductListComponent} from './product/product-list/product-list.component';
-import {ProductCreateComponent} from './product/product-create/product-create.component';
-import {ReactiveFormsModule} from "@angular/forms";
 import { DicPageComponent } from './dictionary/dic-page/dic-page.component';
 import { DicDetailComponent } from './dictionary/dic-detail/dic-detail.component';
-import { ProductUpdateComponent } from './product/product-update/product-update.component';
-import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
 import {HttpClientModule} from "@angular/common/http";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -21,18 +17,14 @@ import {HttpClientModule} from "@angular/common/http";
     TimelinesComponent,
     PlaylistComponent,
     PlaylistPlayerComponent,
-    ProductListComponent,
-    ProductCreateComponent,
     DicPageComponent,
     DicDetailComponent,
-    ProductUpdateComponent,
-    ProductDeleteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
