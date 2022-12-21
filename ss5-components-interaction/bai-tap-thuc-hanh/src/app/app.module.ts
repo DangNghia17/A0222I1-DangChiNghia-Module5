@@ -6,7 +6,7 @@ import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
 import { TodoComponent } from './todo/todo.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {ReactiveFormsModule} from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({

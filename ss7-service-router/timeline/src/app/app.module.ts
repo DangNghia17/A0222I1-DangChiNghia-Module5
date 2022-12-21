@@ -13,6 +13,7 @@ import { DicPageComponent } from './dictionary/dic-page/dic-page.component';
 import { DicDetailComponent } from './dictionary/dic-detail/dic-detail.component';
 import { ProductUpdateComponent } from './product/product-update/product-update.component';
 import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProductDeleteComponent } from './product/product-delete/product-delete.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

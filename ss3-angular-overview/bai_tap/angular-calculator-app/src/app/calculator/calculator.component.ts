@@ -29,7 +29,7 @@ export class CalculatorComponent implements OnInit {
         this.result = this.number1 * this.number2;
         break;
       case "/":
-        if (this.number1 || this.number2 === 0) {
+        if ( this.number2 == 0) {
           return this.result = 'Not divided with 0!'
         }
         return this.result = this.number1 / this.number2;
