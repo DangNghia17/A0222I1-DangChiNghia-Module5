@@ -18,14 +18,17 @@ export class ProductUpdateComponent implements OnInit {
   constructor(private productService: ProductService,
               private categoryService: CategoryService,
               private activatedRoute: ActivatedRoute) {
-    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
-      this.id = +paramMap.get('id');
-      this.getProduct(this.id);
-    });
+
   }
 
   ngOnInit() {
     this.getAllCategory();
+    this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
+      this.id = +paramMap.get('id');
+      this.getProduct(this.id);
+      console.log(this.getProduct(this.id));
+    });
+
   }
 
   private getProduct(id: number) {
@@ -36,6 +39,7 @@ export class ProductUpdateComponent implements OnInit {
         description: new FormControl(product.description),
         category: new FormControl(product.category.id)
       });
+      console.log(this.productForm.value);
     });
   }
 

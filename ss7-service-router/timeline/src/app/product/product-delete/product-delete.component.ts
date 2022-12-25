@@ -17,22 +17,26 @@ export class ProductDeleteComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private activatedRoute: ActivatedRoute,
-    private router: Router) {
+    private router: Router  ) {
+  };
+
+  ngOnInit() {
     this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
       this.id = +paramMap.get('id');    // get id từ link
-      const product = this.productService.findById(this.id).subscribe(product => {
-        this.productForm = new FormGroup({
-          name: new FormControl(product.name),
-          price: new FormControl(product.price),
-          description: new FormControl(product.description),
-          category: new FormControl(product.category.id)
-        });
-      });
+      this.getProduct(this.id);
+    });
+  }
+  private getProduct(id: number) {
+    return this.productService.findById(id).subscribe(product => {
+      this.productForm = new FormGroup({
+        name: new FormControl(product.name),
+        price: new FormControl(product.price),
+        description: new FormControl(product.description),
+        category: new FormControl(product.category.id)
+      })
     });
   }
 
-  ngOnInit() {
-  }
 
   deleteProduct(id: number) {
     this.productService.deleteProduct(id).subscribe(() => {

@@ -1,0 +1,53 @@
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Customer Management</h4>
+    <div>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modelId">
+        Create Customer
+      </button>
+    </div>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Code</th>
+        <th>DOB</th>
+        <th>Gender</th>
+        <th>CCCD/CMND</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Type</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let item of customers; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.code}}</td>
+        <td>{{item.dob | date: 'dd-MM-yyyy'}}</td>
+        <td [ngSwitch]="item.gender">
+          <span *ngSwitchCase="0">Female</span>
+          <span *ngSwitchCase="1">Male</span>
+          <span *ngSwitchCase="2">LGBT</span>
+        </td>
+        <td>{{item.cccd}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.type}}</td>
+        <td>{{item.address}}</td>
+        <td>
+          <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modelId2">
+            <i class="fa-solid fa-highlighter"></i>
+          </button>
+          <button (click)="deleteCustomer(item.id, item.code)" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modelId3">
+            <i class="fa-solid fa-eraser"></i>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

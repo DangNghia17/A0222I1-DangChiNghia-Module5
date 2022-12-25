@@ -10,6 +10,8 @@ import { DicPageComponent } from './dictionary/dic-page/dic-page.component';
 import { DicDetailComponent } from './dictionary/dic-detail/dic-detail.component';
 import {HttpClientModule} from "@angular/common/http";
 import {SharedModule} from "./shared/shared.module";
+import { NgxPaginationModule } from 'ngx-pagination';
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {SharedModule} from "./shared/shared.module";
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

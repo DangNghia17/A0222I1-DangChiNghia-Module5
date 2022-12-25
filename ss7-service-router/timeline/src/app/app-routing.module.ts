@@ -3,12 +3,10 @@ import {Routes, RouterModule} from '@angular/router';
 import {TimelinesComponent} from "./timelines/timelines.component";
 import {PlaylistComponent} from "./playlist/playlist.component";
 import {PlaylistPlayerComponent} from "./playlist-player/playlist-player.component";
-import {ProductListComponent} from "./product/product-list/product-list.component";
-import {ProductCreateComponent} from "./product/product-create/product-create.component";
+
 import {DicPageComponent} from "./dictionary/dic-page/dic-page.component";
 import {DicDetailComponent} from "./dictionary/dic-detail/dic-detail.component";
-import {ProductUpdateComponent} from "./product/product-update/product-update.component";
-import {ProductDeleteComponent} from "./product/product-delete/product-delete.component";
+
 
 
 const routes: Routes = [

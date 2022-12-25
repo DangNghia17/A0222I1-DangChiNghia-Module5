@@ -26,7 +26,6 @@
     }
   ],
   "products": [
-    [
       {
         "id": 1,
         "name": "IPhone 12",
@@ -62,5 +61,4 @@
         "description": "Like new"
       }
     ]
-  ]
 }

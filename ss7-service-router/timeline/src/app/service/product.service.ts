@@ -31,7 +31,7 @@ export class ProductService {
   // }
 
   saveProduct(product): Observable<Product> {
-    return this.httpClient.post<Product>(`http://localhost:3000' + '/products`, product);
+    return this.httpClient.post<Product>(`http://localhost:3000/products`, product);
   }
 
   // findById(id: number) {
@@ -39,7 +39,7 @@ export class ProductService {
   // }
 
   findById(id: number): Observable<Product> {
-    return this.httpClient.get<Product>(`http://localhost:3000' + '/products/${id}`);
+    return this.httpClient.get<Product>(`http://localhost:3000/products/${id}`);
   }
 
   // updateProduct(id: number, product: Product) {
@@ -50,7 +50,7 @@ export class ProductService {
   //   }
   // }
   updateProduct(id: number, product: Product): Observable<Product> {
-    return this.httpClient.put<Product>(`http://localhost:3000' + '/products/${id}`, product);
+    return this.httpClient.put<Product>(`http://localhost:3000/products/${id}`, product);
   }
 
 

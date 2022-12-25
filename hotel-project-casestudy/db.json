@@ -1,0 +1,168 @@
+{
+  "contracts": [
+    {
+      "id": 1,
+      "code": "HD001",
+      "startDate": "2022-12-06",
+      "endDate": "2022-12-06",
+      "downPayment": 120000,
+      "totalPayment": 300000
+    },
+    {
+      "id": 2,
+      "code": "HD002",
+      "startDate": "2022-12-06",
+      "endDate": "2022-12-06",
+      "downPayment": 560000,
+      "totalPayment": 620000
+    },
+    {
+      "id": 3,
+      "code": "HD003",
+      "startDate": "2022-12-06",
+      "endDate": "2022-12-06",
+      "downPayment": 250000,
+      "totalPayment": 850000
+    },
+    {
+      "id": 4,
+      "code": "HD004",
+      "startDate": "2022-12-06",
+      "endDate": "2022-12-06",
+      "downPayment": 350000,
+      "totalPayment": 360000
+    },
+    {
+      "code": "HD005",
+      "startDate": "2022-12-15",
+      "endDate": "2022-12-07",
+      "downPayment": 200000,
+      "totalPayment": 300000,
+      "id": 5
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "code": "KH-0001",
+      "name": "nguyen A",
+      "dob": "2000-12-06",
+      "gender": 0,
+      "cccd": "231340370",
+      "phone": "0326459876",
+      "email": "an@gmail.com",
+      "type": "diamond",
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "code": "KH-0002",
+      "name": "nguyen B",
+      "dob": "2000-12-06",
+      "gender": 1,
+      "cccd": "231340370",
+      "phone": "0326489876",
+      "email": "bn@gmail.com",
+      "type": "gold",
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": 3,
+      "code": "KH-0003",
+      "name": "nguyen C",
+      "dob": "2000-12-06",
+      "gender": 2,
+      "cccd": "231340370",
+      "phone": "0378959876",
+      "email": "cn@gmail.com",
+      "type": "silver",
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": 4,
+      "code": "KH-0004",
+      "name": "nguyen D",
+      "dob": "2000-12-06",
+      "gender": 2,
+      "cccd": "231340370",
+      "phone": "0698749876",
+      "email": "dn@gmail.com",
+      "type": "diamond",
+      "address": "Đà Nẵng"
+    }
+  ],
+  "facilities": [
+    {
+      "id": 1,
+      "name": "LUXURY HOUSE",
+      "area": 200,
+      "price": 2000000,
+      "maximum": 12,
+      "image": "../../assets/facility-image/architecture-5339245__3402222.jpg",
+      "type": "luxury"
+    },
+    {
+      "id": 2,
+      "name": "OCEAN ROOM",
+      "area": 25,
+      "price": 2000000,
+      "maximum": 12,
+      "image": "../../assets/facility-image/Six-Senses-Ninh-Van-Bayc-min-2.jpg",
+      "type": "luxury"
+    },
+    {
+      "id": 3,
+      "name": "STANDARD HOUSE",
+      "area": 150,
+      "price": 2000000,
+      "maximum": 12,
+      "image": "../../assets/facility-image/residence-2219972__340.jpg",
+      "type": "luxury"
+    },
+    {
+      "id": 4,
+      "name": "KING VILLA",
+      "area": 35,
+      "price": 2000000,
+      "maximum": 12,
+      "image": "../../assets/facility-image/333333.jpg",
+      "type": "luxury"
+    },
+    {
+      "id": 5,
+      "name": "OCEAN VILLA",
+      "area": 85,
+      "price": 2000000,
+      "maximum": 12,
+      "image": "../../assets/facility-image/Sunrise-Nha-Trang-Beach-Hotel-Spacccc-5.jpg",
+      "type": "luxury"
+    },
+    {
+      "id": 6,
+      "name": "OCEAN HOUSE",
+      "area": 250,
+      "price": 2000000,
+      "maximum": 12,
+      "image": "../../assets/facility-image/Mia-Resort-Nha-Trang-6.jpg",
+      "type": "luxury"
+    },
+    {
+      "id": 7,
+      "name": "OCEAN ROOM",
+      "area": 20,
+      "price": 2000000,
+      "maximum": 12,
+      "image": "../../assets/facility-image/Mia-Resort-Nha-Trangcc-7.jpg",
+      "type": "luxury"
+    },
+    {
+      "id": 8,
+      "name": "LUXURY HOUSE",
+      "area": 150,
+      "price": 2000000,
+      "maximum": 12,
+      "image": "../../assets/facility-image/Mia-Resort-Nha-Trangcccc-8.jpg",
+      "type": "luxury"
+    }
+  ]
+}
