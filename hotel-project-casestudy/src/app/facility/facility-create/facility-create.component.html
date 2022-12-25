@@ -1,1 +1,50 @@
-<p>facility-create works!</p>
+<!-- Modal -->
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Create Facility</h5>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="facilityFormCreate" (ngSubmit)="createFacility()">
+          <div class="form-group">
+            <label class="form-label">Tên dịch vụ: </label>
+            <input formControlName="name" type="text" class="form-control" required>
+               </div>
+
+          <div class="form-group">
+            <label class="form-label">Diện tích: </label>
+            <input formControlName="area" type="number" class="form-control" required>
+               </div>
+
+          <div class="form-group">
+            <label class="form-label">Giá: </label>
+            <input formControlName="price" type="number" class="form-control" required>
+              </div>
+
+          <div class="form-group">
+            <label class="form-label">Số lượng người: </label>
+            <input formControlName="maximum" type="number" class="form-control" required>
+              </div>
+
+          <div class="form-group">
+            <label class="form-label">Địa chỉ hình ảnh (source) :</label>
+            <input formControlName="image" type="url" class="form-control" required>
+             </div>
+
+          <div class="form-group">
+            <label class="form-label">Loại:   </label>
+            <input formControlName="type" type="radio" value="luxury" > Luxury
+            <input formControlName="type" type="radio" value="min"> Min
+            <input formControlName="type" type="radio" value="flex"> Flex
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn bg-success text-light">Create</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

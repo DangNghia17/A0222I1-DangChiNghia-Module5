@@ -93,16 +93,14 @@
   </div>
 
   <div class="row">
-    <div class="card col-3" *ngFor="let item of facilities">
+    <div class="card col-3" *ngFor="let facility of facilities">
       <div>
-        <img [src]="item.image" class="card-img-top" alt="...">
+        <img [src]="facility.image" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">{{item.name}}</h5>
-          <p class="card-text">House size: {{item.area}} m2</p>
-          <button (click)="edit(item.id)" type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#modelId2">
-            Edit
-          </button>
-          <button (click)="deleteFacility(item.id, item.name)" type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#modelId3">
+          <h5 class="card-title">{{facility.name}}</h5>
+          <p class="card-text">House size: {{facility.area}} m2</p>
+          <td><a [routerLink]="['/facility/edit/',facility.id]" class="btn btn-warning">Edit</a></td>
+          <button (click)="deleteFacility(facility.id, facility.name)" type="button" class="btn btn-danger" data-toggle="modal" data-target="#modelId3">
             Delete
           </button>
         </div>
@@ -124,6 +122,6 @@
     </ul>
   </nav>
 </div>
-<app-create-facility></app-create-facility>
-<app-edit-facility *ngIf="facility" [editFacility] = "facility"></app-edit-facility>
-<app-delete-facility [deleteFacility]="facilityName"></app-delete-facility>
+Chưa xoá được + tạo cần phải refresh
+<app-facility-create></app-facility-create>
+<app-facility-delete [deleteFacility]="facilityId"></app-facility-delete>

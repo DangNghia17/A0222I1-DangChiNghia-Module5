@@ -1,1 +1,44 @@
-<p>facility-edit works!</p>
+<div class="col-md-6 d-flex justify-content-center">
+  <form [formGroup]="facilityFormEdit" (ngSubmit)="editFacility(id)">
+    <div class="form-group">
+      <label>Tên dịch vụ: </label>
+      <input formControlName="name" type="text" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label>Diện tích: </label>
+      <input formControlName="area" type="number" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label>Giá: </label>
+      <input formControlName="price" type="number" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label>Số lượng người: </label>
+      <input formControlName="maximum" type="number" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <label>Loại</label>
+      <div class="form-check">
+        <input class="form-check-input"  formControlName="type"type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="min">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Min
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" formControlName="type" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="luxury">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Luxury
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" formControlName="type"type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="flex" >
+        <label class="form-check-label" for="flexRadioDefault1">
+          Flex
+        </label>
+      </div>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-outline-warning">Edit</button>
+    </div>
+  </form>
+</div>

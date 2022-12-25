@@ -11,6 +11,8 @@ import {CustomerComponent} from "./customer/customer.component";
 const routes: Routes = [
   {path: "", component: FacilityComponent},
   {path: "customer", component: CustomerComponent},
+  {path: "facility/edit/:id", component: FacilityEditComponent},
+  {path: "facility/delete/:id", component: FacilityEditComponent},
   {path: "facility", component: FacilityComponent},
   {path: "contract", component: ContractComponent},
 ];

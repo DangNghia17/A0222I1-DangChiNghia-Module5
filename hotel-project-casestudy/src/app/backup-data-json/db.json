@@ -163,15 +163,6 @@
       "maximum": 12,
       "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/342052578.jpg?k=e080c9e0cc2e84c221e383692e109c007301be8e9c1897c03b22cbc2ab3bc57c&o=&hp=1",
       "type": "luxury"
-    },
-    {
-      "name": "1231",
-      "area": 2312312,
-      "price": 3123,
-      "maximum": 123123,
-      "image": "123123",
-      "type": "flex",
-      "id": 9
     }
   ]
 }

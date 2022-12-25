@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Facility} from "../model/facility";
 import {FacilityService} from "../service/facility.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-facility',
@@ -8,11 +9,12 @@ import {FacilityService} from "../service/facility.service";
   styleUrls: ['./facility.component.css']
 })
 export class FacilityComponent implements OnInit {
-  facilities: Facility[]
-  facility: Facility;
-  facilityName: string;
+  facilities: Facility[];
+   facilityId: number;
 
-  constructor(private facilityService: FacilityService) {
+
+  constructor(private facilityService: FacilityService,
+              private router : Router) {
   }
 
   ngOnInit(): void {
@@ -26,11 +28,9 @@ export class FacilityComponent implements OnInit {
     })
   }
 
-  edit(id: number) {
-    this.facility = this.facilityService.findById(id);
-  }
-
   deleteFacility(id: number, name: string) {
+    this.facilityId = id;
 
-  }
+  };
+
 }
