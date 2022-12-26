@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-customer-delete',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-delete.component.css']
 })
 export class CustomerDeleteComponent implements OnInit {
-
+  @Input('inputCode')
+  code: string;
   constructor() { }
 
   ngOnInit(): void {

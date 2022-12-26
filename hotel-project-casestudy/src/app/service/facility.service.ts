@@ -8,7 +8,6 @@ import {Contract} from "../model/contract";
   providedIn: 'root'
 })
 export class FacilityService {
-  private facilities: Facility[] = [];
 
   constructor(private httpClient: HttpClient) {
   }
