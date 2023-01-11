@@ -8,11 +8,13 @@ import {Student} from "../model/student";
   providedIn: 'root'
 })
 export class StudentService {
+  readonly URL_LIST = 'http://localhost:8080/students/list';
+  readonly URL_FIND_BY_ID = 'http://localhost:8080/students/find/';
 
   constructor(private httpClient : HttpClient) {}
 
   getAll(): Observable<Student[]> {
-    return this.httpClient.get<Student[]>(`http://localhost:3000/students`);
+    return this.httpClient.get<Student[]>(this.URL_LIST);
   }
 
   save(student): Observable<Student> {
