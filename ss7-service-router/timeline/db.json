@@ -31,7 +31,7 @@
         "name": "IPhone 12",
         "price": 2400000,
         "description": "New",
-        "class": {
+        "category": {
           "id": 1,
           "name": "Iphone"
         }

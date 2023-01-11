@@ -20,8 +20,8 @@
     <tr>
       <td>Loại sản phẩm</td>
       <td><select formControlName="category" class="custom-select">
-        <option selected [value]="null" disabled>Chọn loại sản phẩm</option>
-        <option *ngFor="let category of categories" [ngValue]="category.id">{{category.name}}</option> //ngValue : object # value
+        <option selected [value]="null">Chọn loại sản phẩm</option>
+        <option *ngFor="let category of categories" [ngValue]="category.id">{{category.name}}</option>
       </select> </td>
     </tr>
     <tr>

@@ -1,0 +1,58 @@
+<h1 class="text-black-50"> Danh sách sinh viên </h1>
+<div class="row">
+
+</div>
+      <table class="table table-bordered table-hover">
+        <tr class="bg-dark text-light">
+          <th>#</th>
+          <th >Ma sinh vien</th>
+          <th>Ten sinh vien</th>
+          <th>Ten nhom</th>
+          <th>Ten de tai </th>
+          <th>Giao vien</th>
+          <th>Email</th>
+          <th>Sdt</th>
+          <th>Action</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor=" let student of students ; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{student.id}}</td>
+          <td>{{student.name}}</td>
+          <td>{{student.group}}</td>
+          <td>{{student.topic}}</td>
+          <td>{{student.teacher.name}}</td>
+          <td>{{student.email}}</td>
+          <td>{{student.phone}}</td>
+          <td><a [routerLink]="['/edit',student.id]" class="btn btn-outline-warning">Edit</a></td>
+          <td>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delModal" (click)="delModal(student)">Delete</button>
+          </td>
+        </tr>
+      </table>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete package:</h5>
+      </div>
+      <div class="modal-body">
+        <p>Ban co muon xoa : {{deleteStudent.name}} </p>
+        <br>
+        <table class="table">
+          <tr>
+            <td>Mã số sinh viên :</td>
+            <td>{{deleteStudent.id}}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Quay lai</button>
+        <button type="button" class="btn btn-danger" (click)="delPackage(deleteStudent.id)" data-dismiss="modal">Xoa</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end modal-->

@@ -1,0 +1,66 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Nghia 1",
+      "group": "Nhom 3",
+      "topic": "topic 2",
+      "email": "dnghia2002@gmail.com",
+      "phone": "8412345678",
+      "teacher": {
+        "id": 2,
+        "name": "Teacher 2"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Nghia 222222",
+      "group": "Nhom 3",
+      "topic": "topic 222",
+      "email": "dnghia2002@gmail.com2",
+      "phone": "8412345622",
+      "teacher": "2"
+    },
+    {
+      "id": 3,
+      "name": "Nghia 222222",
+      "group": "Nhom 3",
+      "topic": "topic 222",
+      "email": "dnghia2002@gmail.com2",
+      "phone": "8412345622",
+      "teacher": "2"
+    },
+    {
+      "id": 4,
+      "name": "Nghia 222222",
+      "group": "Nhom 3",
+      "topic": "topic 222",
+      "email": "dnghia2002@gmail.com2",
+      "phone": "8412345622",
+      "teacher": "2"
+    },
+    {
+      "id": 5,
+      "name": "Nghia 222222",
+      "group": "Nhom 3",
+      "topic": "topic 222",
+      "email": "dnghia2002@gmail.com2",
+      "phone": "8412345622",
+      "teacher": "2"
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Teacher 1"
+    },
+    {
+      "id": 2,
+      "name": "Teacher 2"
+    },
+    {
+      "id": 2,
+      "name": "Teacher 3"
+    }
+  ]
+}

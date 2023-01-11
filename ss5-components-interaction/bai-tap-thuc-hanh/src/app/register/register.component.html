@@ -52,7 +52,7 @@
     <input formControlName="phone" type="text" name="phone" class="form-control" required>
     <p style="color: red" *ngIf="register.controls.phone.hasError('required') &&register.controls.phone.touched">Phone
       không được để trống !</p>
-    <p style="color: red" *ngIf="register.controls.phone.hasError('pattern')">Phone không đúng định dạng 8412345678</p>
+    <p style="color: red" *ngIf="register.controls.phone.hasError('pattern')">Phone không đúng định dạng 8412345678 hoac 10-12 số</p>
     <br>
     <button type="submit" class="btn btn-success">Create</button>
 

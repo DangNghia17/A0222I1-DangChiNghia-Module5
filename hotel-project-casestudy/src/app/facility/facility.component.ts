@@ -30,7 +30,6 @@ export class FacilityComponent implements OnInit {
 
   deleteFacility(id: number, name: string) {
     this.facilityId = id;
-
   };
 
 }
